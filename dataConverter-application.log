@@ -1,0 +1,50 @@
+2018-05-07 01:23:27 INFO  Main:41 - Starting Main Application
+2018-05-07 01:23:28 INFO  DAO:38 - got data objects [DataObject [name=BOB, startTime=2018-05-06 23:40:43.0, endTime=2018-05-06 23:40:43.0, duration=2018-05-06 23:40:43.0], DataObject [name=BOB, startTime=2018-05-06 23:41:04.0, endTime=2018-05-06 23:41:04.0, duration=2018-05-06 23:41:04.0]]
+2018-05-07 02:38:22 INFO  Main:47 - Starting Main Application
+2018-05-07 02:38:22 INFO  Main:49 - Getting data from DB
+2018-05-07 02:38:23 INFO  DAO:35 - read data objects [DataObject [name=BOB, startTime=2018-05-06 23:40:43.0, endTime=2018-05-06 23:40:43.0, duration=2018-05-06 23:40:43.0], DataObject [name=BOB, startTime=2018-05-06 23:41:04.0, endTime=2018-05-06 23:41:04.0, duration=2018-05-06 23:41:04.0]]
+2018-05-07 02:38:23 INFO  Main:52 - Converting Data
+2018-05-10 23:03:59 INFO  Main:47 - Starting Main Application
+2018-05-10 23:03:59 INFO  Main:49 - Getting data from DB
+2018-05-10 23:04:18 INFO  Main:47 - Starting Main Application
+2018-05-10 23:04:18 INFO  Main:49 - Getting data from DB
+2018-05-10 23:04:42 INFO  Main:47 - Starting Main Application
+2018-05-10 23:04:42 INFO  Main:49 - Getting data from DB
+2018-05-10 23:04:42 DEBUG DAO:35 - read data objects [DataObject [name=BOB, startTime=2018-05-06 23:40:43.0, endTime=2018-05-06 23:40:43.0, duration=2018-05-06 23:40:43.0], DataObject [name=BOB, startTime=2018-05-06 23:41:04.0, endTime=2018-05-06 23:41:04.0, duration=2018-05-06 23:41:04.0]]
+2018-05-10 23:04:42 INFO  Main:52 - Converting Data
+2018-05-10 23:05:28 INFO  Main:47 - Starting Main Application
+2018-05-10 23:05:28 INFO  Main:49 - Getting data from DB
+2018-05-10 23:05:29 DEBUG DAO:35 - read data objects [DataObject [name=BOB, startTime=2018-05-06 23:40:43.0, endTime=2018-05-06 23:40:43.0, duration=2018-05-06 23:40:43.0], DataObject [name=BOB, startTime=2018-05-06 23:41:04.0, endTime=2018-05-06 23:41:04.0, duration=2018-05-06 23:41:04.0]]
+2018-05-10 23:05:29 INFO  Main:52 - Converting Data
+2018-05-10 23:05:44 INFO  Main:47 - Starting Main Application
+2018-05-10 23:05:44 INFO  Main:49 - Getting data from DB
+2018-05-10 23:05:44 DEBUG DAO:35 - read data objects [DataObject [name=BOB, startTime=2018-05-06 23:40:43.0, endTime=2018-05-06 23:40:43.0, duration=2018-05-06 23:40:43.0], DataObject [name=BOB, startTime=2018-05-06 23:41:04.0, endTime=2018-05-06 23:41:04.0, duration=2018-05-06 23:41:04.0]]
+2018-05-10 23:05:44 INFO  Main:52 - Converting Data
+2018-05-10 23:08:27 INFO  Main:47 - Starting Main Application
+2018-05-10 23:08:27 INFO  Main:49 - Getting data from DB
+2018-05-10 23:08:27 DEBUG DAO:35 - read data objects [DataObject [name=BOB, startTime=2018-05-06 23:40:43.0, endTime=2018-05-06 23:40:43.0, duration=2018-05-06 23:40:43.0], DataObject [name=BOB, startTime=2018-05-06 23:41:04.0, endTime=2018-05-06 23:41:04.0, duration=2018-05-06 23:41:04.0]]
+2018-05-10 23:08:27 INFO  Main:52 - Converting Data
+2018-05-10 23:13:59 INFO  Main:47 - Starting Main Application
+2018-05-10 23:13:59 INFO  Main:49 - Getting data from DB
+2018-05-10 23:13:59 DEBUG DAO:35 - read data objects [DataObject [name=BOB, startTime=2018-05-06 23:40:43.0, endTime=2018-05-06 23:40:43.0, duration=2018-05-06 23:40:43.0], DataObject [name=BOB, startTime=2018-05-06 23:41:04.0, endTime=2018-05-06 23:41:04.0, duration=2018-05-06 23:41:04.0]]
+2018-05-10 23:13:59 INFO  Main:52 - Converting Data
+2018-05-10 23:18:31 INFO  Main:47 - Starting Main Application
+2018-05-10 23:18:31 INFO  Main:49 - Getting data from DB
+2018-05-10 23:18:31 DEBUG DAO:35 - read data objects [DataObject [name=BOB, startTime=2018-05-06 23:40:43.0, endTime=2018-05-06 23:40:43.0, duration=2018-05-06 23:40:43.0], DataObject [name=BOB, startTime=2018-05-06 23:41:04.0, endTime=2018-05-06 23:41:04.0, duration=2018-05-06 23:41:04.0]]
+2018-05-10 23:18:31 INFO  Main:52 - Converting Data
+2018-05-10 23:22:33 INFO  Main:47 - Starting Main Application
+2018-05-10 23:22:33 INFO  Main:49 - Getting data from DB
+2018-05-10 23:22:33 DEBUG DAO:35 - read data objects [DataObject [name=BOB, startTime=2018-05-06 23:40:43.0, endTime=2018-05-06 23:40:43.0, duration=2018-05-06 23:40:43.0], DataObject [name=BOB, startTime=2018-05-06 23:41:04.0, endTime=2018-05-06 23:41:04.0, duration=2018-05-06 23:41:04.0]]
+2018-05-10 23:22:33 INFO  Main:52 - Converting Data
+2018-05-10 23:38:57 INFO  Main:47 - Starting Main Application
+2018-05-10 23:38:57 INFO  Main:49 - Getting data from DB
+2018-05-10 23:38:57 DEBUG DAO:35 - read data objects [DataObject [name=BOB, startTime=2018-05-06 23:40:43.0, endTime=2018-05-06 23:40:43.0, duration=2018-05-06 23:40:43.0], DataObject [name=BOB, startTime=2018-05-06 23:41:04.0, endTime=2018-05-06 23:41:04.0, duration=2018-05-06 23:41:04.0]]
+2018-05-10 23:38:57 INFO  Main:52 - Converting Data
+2018-05-10 23:41:21 INFO  Main:47 - Starting Main Application
+2018-05-10 23:41:21 INFO  Main:49 - Getting data from DB
+2018-05-10 23:41:21 DEBUG DAO:35 - read data objects [DataObject [name=BOB, startTime=2018-05-06 23:40:43.0, endTime=2018-05-06 23:40:43.0, duration=2018-05-06 23:40:43.0], DataObject [name=BOB, startTime=2018-05-06 23:41:04.0, endTime=2018-05-06 23:41:04.0, duration=2018-05-06 23:41:04.0]]
+2018-05-10 23:41:21 INFO  Main:52 - Converting Data
+2018-05-10 23:42:13 INFO  Main:47 - Starting Main Application
+2018-05-10 23:42:13 INFO  Main:49 - Getting data from DB
+2018-05-10 23:42:13 DEBUG DAO:35 - read data objects [DataObject [name=BOB, startTime=2018-05-06 23:40:43.0, endTime=2018-05-06 23:40:43.0, duration=2018-05-06 23:40:43.0], DataObject [name=BOB, startTime=2018-05-06 23:41:04.0, endTime=2018-05-06 23:41:04.0, duration=2018-05-06 23:41:04.0]]
+2018-05-10 23:42:13 INFO  Main:52 - Converting Data
