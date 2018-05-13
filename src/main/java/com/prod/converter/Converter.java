@@ -7,9 +7,14 @@ import java.util.List;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.FillPatternType;
+import org.apache.poi.ss.usermodel.IndexedColors;
+import org.apache.poi.xssf.usermodel.XSSFCellStyle;
+import org.apache.poi.xssf.usermodel.XSSFFont;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openxmlformats.schemas.spreadsheetml.x2006.main.CTSheetProtection;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
@@ -24,7 +29,7 @@ public class Converter {
 	private XSSFWorkbook workBook = new XSSFWorkbook();
 
 	// creating the sheet, this is a sheet in the spreadsheet
-	private XSSFSheet spreadSheet = workBook.createSheet("Data Objects");
+	private XSSFSheet spreadSheet = workBook.createSheet("DataObjects");
 
 	// row for iterating
 	private XSSFRow row;
@@ -43,57 +48,69 @@ public class Converter {
 	 */
 	public void convert(List<DataObject> data) throws IOException {
 
-		// style to unlock the cell
-		CellStyle unlockedCellStyle = workBook.createCellStyle();
-		unlockedCellStyle.setLocked(false);
+		XSSFFont defaultFont = workBook.createFont();
+		defaultFont.setFontHeightInPoints((short) 10);
+		defaultFont.setFontName("Arial");
+		defaultFont.setColor(IndexedColors.BLACK.getIndex());
+		defaultFont.setBold(false);
+
+		XSSFFont titleCellFont = workBook.createFont();
+		titleCellFont.getCTFont().addNewB();
+
+		CellStyle titleCellStyle = workBook.createCellStyle();
+		titleCellStyle.setFillForegroundColor(IndexedColors.GREY_40_PERCENT.getIndex());
+		titleCellStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+		titleCellStyle.setFont(titleCellFont);
 		
-		CellStyle lockedCellStyle = workBook.createCellStyle();
-		unlockedCellStyle.setLocked(true);
-	
-	
+		CellStyle regularCellStyle = workBook.createCellStyle();
+		regularCellStyle.setFont(defaultFont);
+		
 		row = spreadSheet.createRow(rowId++);
 
 		Cell nameLabel = row.createCell(0);
 		nameLabel.setCellValue("Name");
-		nameLabel.setCellStyle(lockedCellStyle);
+		nameLabel.setCellStyle(titleCellStyle);
 
 		Cell startTimeLabel = row.createCell(1);
 		startTimeLabel.setCellValue("Start Time");
-		startTimeLabel.setCellStyle(lockedCellStyle);
+		startTimeLabel.setCellStyle(titleCellStyle);
 
 		Cell endTimeLabel = row.createCell(2);
 		endTimeLabel.setCellValue("End Time");
-		endTimeLabel.setCellStyle(lockedCellStyle);
+		endTimeLabel.setCellStyle(titleCellStyle);
 
 		Cell durationLabel = row.createCell(3);
 		durationLabel.setCellValue("Duration");
-		durationLabel.setCellStyle(lockedCellStyle);
+		durationLabel.setCellStyle(titleCellStyle);
 
 		// iterate over the list and write it to the corresponding cell in the sheet
 		// don't change to stream
 		data.forEach((e) -> {
 
 			row = spreadSheet.createRow(rowId++);
+			
 
 			Cell name = row.createCell(0);
 			name.setCellValue(e.getName());
-			name.setCellStyle(unlockedCellStyle);
+			name.setCellStyle(regularCellStyle);
 
 			Cell startTime = row.createCell(1);
 			startTime.setCellValue(e.getStartTime());
-			startTime.setCellStyle(unlockedCellStyle);
+			startTime.setCellStyle(regularCellStyle);
 
 			Cell endTime = row.createCell(2);
 			endTime.setCellValue(e.getEndTime());
-			endTime.setCellStyle(unlockedCellStyle);
+			endTime.setCellStyle(regularCellStyle);
 
 			Cell duration = row.createCell(3);
 			duration.setCellValue(e.getDuration());
-			duration.setCellStyle(unlockedCellStyle);
+			duration.setCellStyle(regularCellStyle);
 
 		});
 		
-		workBook.lockRevision();
+		//set column to wrap around content
+		for(int i = 0; i < 4;i++) 
+			spreadSheet.autoSizeColumn(i, false);
 
 		// write the workbook to file
 		write();
