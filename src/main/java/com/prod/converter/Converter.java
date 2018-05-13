@@ -61,9 +61,13 @@ public class Converter {
 		titleCellStyle.setFillForegroundColor(IndexedColors.GREY_40_PERCENT.getIndex());
 		titleCellStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
 		titleCellStyle.setFont(titleCellFont);
+		titleCellStyle.setAlignment(HorizontalAlignment.RIGHT);
 		
-		CellStyle regularCellStyle = workBook.createCellStyle();
-		regularCellStyle.setFont(defaultFont);
+		CellStyle rightAlignStyle = workBook.createCellStyle();
+		rightAlignStyle.setFillForegroundColor(IndexedColors.GREY_40_PERCENT.getIndex());
+		rightAlignStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+		rightAlignStyle.setFont(titleCellFont);
+		rightAlignStyle.setAlignment(HorizontalAlignment.RIGHT);
 		
 		row = spreadSheet.createRow(rowId++);
 
