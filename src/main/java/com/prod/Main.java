@@ -43,6 +43,12 @@ public class Main {
 
 	}
 	
+	static String getCurrentTime() {
+		SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy hh:mm a");
+		Date date = new Date();
+		return dateFormat.format(date);
+	}
+	
     private void start() throws IOException {
         logger.info("Starting Main Application");
         
