@@ -11,7 +11,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 @Configuration
-@PropertySource("classpath:DatabaseProperties.properties")
+@PropertySource("classpath:DatabaseProperties.conf")
 public class SpringJdbcConfig {
 
 	@Value("${db.url}")
