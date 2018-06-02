@@ -8,10 +8,8 @@ import java.util.List;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.FillPatternType;
-<<<<<<< HEAD
+
 import org.apache.poi.ss.usermodel.HorizontalAlignment;
-=======
->>>>>>> 0d192973c7f5af11938725b5a1fcc38cf2fa0919
 import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
 import org.apache.poi.xssf.usermodel.XSSFFont;
@@ -72,12 +70,8 @@ public class Converter {
 		rightAlignStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
 		rightAlignStyle.setFont(titleCellFont);
 		rightAlignStyle.setAlignment(HorizontalAlignment.RIGHT);
-<<<<<<< HEAD
-		
 		CellStyle regularCellStyle = workBook.createCellStyle();
 		regularCellStyle.setFont(defaultFont);
-=======
->>>>>>> 0d192973c7f5af11938725b5a1fcc38cf2fa0919
 		
 		row = spreadSheet.createRow(rowId++);
 
@@ -106,7 +100,6 @@ public class Converter {
 
 			Cell name = row.createCell(0);
 			name.setCellValue(e.getName());
-<<<<<<< HEAD
 			name.setCellStyle(rightAlignStyle);
 
 			Cell startTime = row.createCell(1);
@@ -116,17 +109,7 @@ public class Converter {
 			Cell endTime = row.createCell(2);
 			endTime.setCellValue(e.getEndTime());
 			endTime.setCellStyle(rightAlignStyle);
-=======
 			name.setCellStyle(regularCellStyle);
-
-			Cell startTime = row.createCell(1);
-			startTime.setCellValue(e.getStartTime());
-			startTime.setCellStyle(regularCellStyle);
-
-			Cell endTime = row.createCell(2);
-			endTime.setCellValue(e.getEndTime());
-			endTime.setCellStyle(regularCellStyle);
->>>>>>> 0d192973c7f5af11938725b5a1fcc38cf2fa0919
 
 			Cell duration = row.createCell(3);
 			duration.setCellValue(e.getDuration());
