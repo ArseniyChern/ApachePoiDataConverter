@@ -7,22 +7,23 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import com.prod.converter.LongRunningQuery;
+
 public class Converter {
 
-	static HashMap<String, String> convert(String link) {
+	static List<LongRunningQuery> convert(String link) {
 		HttpURLConnection con = null;
 		try {
 			URL url = new URL(link);
 			con = (HttpURLConnection) url.openConnection();
 			con.setRequestMethod("GET");
-
-			int status = con.getResponseCode();
 
 			BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
 
@@ -45,6 +46,13 @@ public class Converter {
 			
 			filtered.forEach(System.out::println);
 			
+			List<LongRunningQuery> toReturn = new ArrayList<LongRunningQuery>();
+			
+			filtered.forEach(obj -> {
+				toReturn.add(LongRunningQuery.fromJSONObject(obj));
+			});
+			
+			return toReturn;
 			
 		} catch (IOException e) {
 			e.printStackTrace();
